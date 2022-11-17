@@ -1,0 +1,11 @@
+.product-card-list-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  padding: 30px;
+  border-radius: 30px;
+  margin: auto;
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}

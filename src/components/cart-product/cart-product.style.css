@@ -1,0 +1,27 @@
+.cart-product-container {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 10px;
+}
+
+.cart-product-img-container {
+  height: 40px;
+  width: 40px;
+}
+.cart-product-img-container img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+.cart-product-description {
+  display: flex;
+  flex-direction: column;
+}
+.cart-product-barcode {
+  font-weight: bold;
+  font-size: 14px;
+}
+.cart-product-title {
+  color: gray;
+  font-size: 10px;
+}

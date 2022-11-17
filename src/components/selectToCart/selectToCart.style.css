@@ -1,0 +1,10 @@
+.switch-btn-container {
+  display: flex;
+  justify-content: end;
+  padding: 0px 10%;
+}
+
+.select-to-cart {
+  font-size: 60px;
+  cursor: pointer;
+}

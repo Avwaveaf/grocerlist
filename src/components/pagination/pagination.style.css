@@ -1,0 +1,33 @@
+.pagination-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+}
+
+.navigationButton {
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 50px;
+  border: 2px solid black;
+  padding: 5%;
+  margin: 20px;
+}
+
+.pagination-component {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.max-page-count-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.max-page-count-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}

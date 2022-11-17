@@ -1,0 +1,58 @@
+.navbar-container {
+  display: flex;
+  width: 100%;
+  position: fixed;
+  padding: 20px 30px;
+
+  justify-content: space-between;
+  color: black;
+  top: 0px;
+  z-index: 1000;
+
+  background: white;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+.cart-container {
+  display: flex;
+  position: fixed;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.9px);
+  -webkit-backdrop-filter: blur(6.9px);
+  border: 1px solid rgba(255, 255, 255, 0.471);
+  width: 20%;
+  height: 400px;
+  padding: 10px;
+  right: 60px;
+  top: -400px;
+  transition: 1s;
+  flex-direction: column;
+  opacity: 0;
+  z-index: 100;
+}
+.tools-button-container {
+  display: flex;
+}
+
+.cart-btn-container {
+  cursor: pointer;
+  color: black;
+  padding: 0px 50px;
+}
+.showCart {
+  transform: translateY(470px);
+  opacity: 1;
+}
+.cart-counter {
+  position: fixed;
+  font-size: 14px;
+  top: 7px;
+  right: 20px;
+  padding: 3px;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  background-color: red;
+}
