@@ -1,5 +1,4 @@
 import { useState } from "react";
-
 import {
   createUserAuthWithEmailAndPassword,
   createUserDocFromAuth,
@@ -37,6 +36,7 @@ export const SignUpForm = () => {
         displayName: displayName,
       });
       resetFormFields();
+      // setCurrentUser(user);
     } catch (error) {
       if (error.code === "auth/email-already-in-use") {
         prompt("Email Already in use, please Login");

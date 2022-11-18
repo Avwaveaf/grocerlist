@@ -33,6 +33,7 @@
 }
 .tools-button-container {
   display: flex;
+  margin-right: 50px;
 }
 
 .cart-btn-container {

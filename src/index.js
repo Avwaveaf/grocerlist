@@ -8,20 +8,23 @@ import { SnacksContextProvider } from "./components/context/snacksList";
 import { SearchProductContextProvider } from "./components/context/searchProduct.context";
 import { ToasterContextProvider } from "./components/context/toaster.context";
 import { SelectToCartContextProvider } from "./components/context/selectToCart.context";
+import { UserContextProvider } from "./components/context/user.context";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <SelectToCartContextProvider>
-        <SnacksContextProvider>
-          <SearchProductContextProvider>
-            <ToasterContextProvider>
-              <App />
-            </ToasterContextProvider>
-          </SearchProductContextProvider>
-        </SnacksContextProvider>
-      </SelectToCartContextProvider>
+      <UserContextProvider>
+        <SelectToCartContextProvider>
+          <SnacksContextProvider>
+            <SearchProductContextProvider>
+              <ToasterContextProvider>
+                <App />
+              </ToasterContextProvider>
+            </SearchProductContextProvider>
+          </SnacksContextProvider>
+        </SelectToCartContextProvider>
+      </UserContextProvider>
     </BrowserRouter>
   </React.StrictMode>
 );
