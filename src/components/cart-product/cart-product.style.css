@@ -2,11 +2,24 @@
   display: flex;
   justify-content: space-evenly;
   margin-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgb(157, 155, 155);
+  box-sizing: border-box;
+}
+.cart-product-grade {
+  align-items: flex-end;
+  font-size: 10px;
+  display: flex;
+  width: 100px;
+  justify-content: end;
+  text-transform: uppercase;
 }
 
 .cart-product-img-container {
   height: 40px;
   width: 40px;
+  box-sizing: border-box;
+  align-items: center;
 }
 .cart-product-img-container img {
   height: 100%;
@@ -16,12 +29,13 @@
 .cart-product-description {
   display: flex;
   flex-direction: column;
+  width: 50px;
 }
 .cart-product-barcode {
   font-weight: bold;
   font-size: 14px;
 }
 .cart-product-title {
-  color: gray;
+  color: rgb(112, 112, 112);
   font-size: 10px;
 }

@@ -1,7 +1,7 @@
 import { SelectToCartContext } from "../context/selectToCart.context";
 
 import "./productCard.style.css";
-import { useContext, useState } from "react";
+import { useContext } from "react";
 
 export const ProductCard = ({ item }) => {
   const {
@@ -17,38 +17,18 @@ export const ProductCard = ({ item }) => {
     image_url = "https://via.placeholder.com/200/000000/FFFFFF/?text=Product Image",
   } = item;
 
-  const {
-    selectTriggered,
+  const { setToggleOpenCart, setCardSelectedVariety } =
+    useContext(SelectToCartContext);
 
-    setToggleOpenCart,
-    setCardSelectedVariety,
-    deleteCardDataFromSelectVariety,
-  } = useContext(SelectToCartContext);
-
-  const cardSelectHandler = (isChecked) => {
+  const cardSelectHandler = () => {
     setToggleOpenCart(false);
-    if (selectTriggered && isChecked) {
-      setCardSelectedVariety(item);
-      console.log(isChecked);
-      console.log(selectTriggered);
-    }
-    if (selectTriggered && isChecked === false) {
-      deleteCardDataFromSelectVariety(item);
-    }
+    setCardSelectedVariety(item);
   };
 
   return (
-    <div className="card-container">
-      <div
-        className={`checkbox-container ${selectTriggered ? "showSelect" : ""}`}
-      >
-        <input
-          type="checkbox"
-          name=""
-          value={item}
-          id="checkBox"
-          onChange={(event) => cardSelectHandler(event.target.checked)}
-        />
+    <div onClick={cardSelectHandler} className="card-container">
+      <div className="add-text-container ">
+        <span className="add-to-cart-text">add to cart</span>
       </div>
       <div>
         <div className="img-container">

@@ -12,13 +12,25 @@
 
   transition: 1s;
 }
-.checkbox-container {
-  position: absolute;
-  margin: 5px;
+.add-text-container {
+  transform: rotate(270deg);
+  top: 90px;
+  background-color: red;
+  padding: 2px 15px;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  left: -108px;
+  position: relative;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   opacity: 0;
+  width: 160px;
+  color: white;
+
+  z-index: -1;
+  transition: 1s;
 }
 
-.showSelect {
+.card-container:hover .add-text-container {
   opacity: 1;
 }
 
@@ -28,7 +40,7 @@
 }
 
 .img-container {
-  height: 150px;
+  height: 120px;
   object-fit: cover;
   margin: auto;
   overflow: hidden;

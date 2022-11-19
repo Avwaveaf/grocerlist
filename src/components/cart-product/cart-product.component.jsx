@@ -1,6 +1,9 @@
+import { useContext } from "react";
+import { SelectToCartContext } from "../context/selectToCart.context";
 import "./cart-product.style.css";
 
 export const CartProduct = ({ product }) => {
+  const { deleteCardDataFromSelectVariety } = useContext(SelectToCartContext);
   const {
     product_name,
     product_name_en,
@@ -9,6 +12,7 @@ export const CartProduct = ({ product }) => {
     ecoscore_grade,
     image_url = "https://via.placeholder.com/100/000000/FFFFFF/?text=Product Image",
   } = product;
+
   return (
     <div className="cart-product-container">
       <div className="cart-product-img-container">
@@ -29,8 +33,9 @@ export const CartProduct = ({ product }) => {
         </div>
       </div>
       <div className="cart-product-grade">
+        <span>Nutriscore : &nbsp;</span>
         {ecoscore_grade !== "unknown" && ecoscore_grade !== "not-applicable"
-          ? ecoscore_grade.toUpperCase()
+          ? ecoscore_grade
           : "-"}
       </div>
     </div>

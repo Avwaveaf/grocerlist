@@ -1,6 +1,23 @@
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 
-const cardVarietyData = [];
+// const cardVarietyData = [];
+
+// const addToCartCard = (existingDatas, data) => {
+//   const existingDatasArray = existingDatas.find(
+//     (existingData) => existingData._id === data._id
+//   );
+
+//   if (existingDatasArray) {
+//     return [...existingDatas, { data }];
+//   }
+//   return
+// };
+
+// const deleteItemInCart = (existingDatas, data) => {
+//   const deleteIndex = existingDatas.indexOf(data);
+//   const splicedDatas = existingDatas.splice(deleteIndex);
+//   return splicedDatas;
+// };
 export const SelectToCartContext = createContext({
   selectTriggered: false,
   setSelectTriggered: () => {},
@@ -16,22 +33,32 @@ export const SelectToCartContext = createContext({
 export const SelectToCartContextProvider = ({ children }) => {
   const [selectTriggered, setSelectTriggered] = useState(false);
   const [toggleOpenCart, setToggleOpenCart] = useState(false);
-  const [cardVariety, setCardVariety] = useState(cardVarietyData);
+  const [cardVariety, setCardVariety] = useState([]);
   const [cardVarietyCount, setCardVarietyCount] = useState(0);
 
+  useEffect(() => {
+    setCardVarietyCount(cardVariety.length);
+  }, [cardVariety]);
+
   const setCardSelectedVariety = (data) => {
-    if (!cardVarietyData.includes(data)) {
-      cardVarietyData.push(data);
-      setCardVariety(cardVarietyData);
-      setCardVarietyCount(cardVarietyData.length);
+    if (!cardVariety.includes(data)) {
+      setCardVariety([...cardVariety, data]);
+      // cardVarietyData.push(data);
+      // setCardVariety(cardVarietyData);
     }
+    return;
   };
   const deleteCardDataFromSelectVariety = (data) => {
-    if (cardVarietyData.includes(data)) {
-      const deleteIndex = cardVarietyData.indexOf(data);
-      cardVarietyData.splice(deleteIndex);
-      setCardVariety(cardVarietyData);
-      setCardVarietyCount(cardVarietyData.length);
+    if (cardVariety.includes(data)) {
+      const updatedCardVariety = cardVariety.filter(
+        (item) => item._id !== data._id
+      );
+      // const splicedDatas = cardVariety.splice(deleteIndex, 1);
+      // // console.log(splicedDatas);
+
+      setCardVariety(updatedCardVariety);
+
+      // setCardVariety(deleteItemInCart(cardVariety, data));
     }
   };
   const value = {

@@ -69,7 +69,6 @@ function ProductExplore() {
       <SideBar />
       <div className="content-container">
         <div className="content">
-          <SelectToCart slide={snack} />
           <Loader status={statusVerbose} />
           {productResult && onSearchUsed ? (
             <ProductCard item={productResult} />

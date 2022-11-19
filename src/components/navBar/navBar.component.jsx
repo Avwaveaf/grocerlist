@@ -16,11 +16,12 @@ export const NavBar = () => {
   const logOutHandler = async () => {
     await signOutUser();
   };
+  console.log(cardVariety);
   return (
     <Fragment>
       <div className="navbar-container">
         <div className="logo-container">
-          <Link className="navigate-button" to="/">
+          <Link to="/">
             <div
               style={{ display: "flex", position: "fixed", top: "10px" }}
               className="logo"
@@ -32,6 +33,7 @@ export const NavBar = () => {
                   position: "fixed",
                   top: "2px",
                   fontFamily: "pacifico",
+                  color: "red",
                 }}
               >
                 L
@@ -41,7 +43,8 @@ export const NavBar = () => {
                   fontSize: "20px",
                   position: "fixed",
                   top: "27px",
-                  left: "60px",
+                  left: "90px",
+                  color: "black",
                 }}
               >
                 ist
@@ -51,7 +54,7 @@ export const NavBar = () => {
                   position: "fixed",
                   fontSize: "20px",
                   top: "14px",
-                  left: "47px",
+                  left: "75px",
                   fontFamily: "pacifico",
                 }}
                 className="grocer-text"
@@ -63,7 +66,8 @@ export const NavBar = () => {
                   fontSize: "20px",
                   position: "fixed",
                   top: "25px",
-                  left: "82px",
+                  left: "113px",
+                  color: "black",
                 }}
                 className="blinking-underscore"
               >
@@ -74,17 +78,17 @@ export const NavBar = () => {
         </div>
         <div className="tools-button-container">
           <Link className="navigate-button" to="/">
-            Home
+            <span>Home</span>
           </Link>
 
           {currentUser === null ? (
             <Link className="navigate-button" to="/sign-in">
-              Sign-in
+              <span>Sign-in</span>
             </Link>
           ) : (
             <Fragment>
               <Link className="navigate-button" to="/products">
-                Products
+                <span>Products</span>
               </Link>
               <Link className="navigate-button" to="/">
                 <span onClick={logOutHandler}>Logout</span>
@@ -114,8 +118,27 @@ export const NavBar = () => {
           toggleOpenCart === true ? "showCart" : ""
         }`}
       >
+        <div className="cart-dropdown-header">
+          <div className="cart-dropdown-title-container">
+            <span>{`Your Diet List (${cardVarietyCount})`}</span>
+          </div>
+          <div
+            onClick={() => {
+              setToggleOpenCart(!toggleOpenCart);
+            }}
+            className="cart-dropdown-title-container"
+          >
+            <Link
+              style={{ marginRight: "0px" }}
+              className="navigate-button"
+              to="cart"
+            >
+              <span>SEE ALL</span>
+            </Link>
+          </div>
+        </div>
         {cardVariety.map((e) => {
-          return <CartProduct product={e} key={e.id} />;
+          return <CartProduct product={e} key={e._id} />;
         })}
       </div>
       <Outlet />
