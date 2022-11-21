@@ -7,6 +7,7 @@ import { Fragment, useContext } from "react";
 import { UserContext } from "./components/context/user.context";
 import { Cart } from "./routes/cart/cart.component";
 import { ProductInfo } from "./routes/product-info/product-info.component";
+import { MyDiet } from "./routes/my-diet/my-diet.component";
 const HomePage = () => {
   return <div style={{ marginTop: "400px" }}>this is home page</div>;
 };
@@ -26,6 +27,7 @@ function App() {
             <Route path="cart" element={<Cart />}>
               <Route path="product" element={<ProductInfo />} />
             </Route>
+            <Route path="mydiet" element={<MyDiet />} />
           </Fragment>
         )}
       </Route>

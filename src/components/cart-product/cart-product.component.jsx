@@ -1,9 +1,6 @@
-import { useContext } from "react";
-import { SelectToCartContext } from "../context/selectToCart.context";
 import "./cart-product.style.css";
 
 export const CartProduct = ({ product }) => {
-  const { deleteCardDataFromSelectVariety } = useContext(SelectToCartContext);
   const {
     product_name,
     product_name_en,

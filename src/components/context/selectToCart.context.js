@@ -67,6 +67,7 @@ export const SelectToCartContextProvider = ({ children }) => {
     toggleOpenCart,
     setCardSelectedVariety,
     cardVariety,
+    setCardVariety,
     cardVarietyCount,
     setCardVarietyCount,
     setToggleOpenCart,

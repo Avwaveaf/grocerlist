@@ -1,0 +1,23 @@
+.my-diet-page-container {
+  display: flex;
+  width: 80%;
+  margin: 70px auto;
+  height: 620px;
+  overflow: hidden;
+  background-color: whitesmoke;
+}
+.my-diet-list {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  overflow: scroll;
+  cursor: pointer;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+.my-diet-list::-webkit-scrollbar {
+  display: none;
+}
+.my-diet-detail {
+  display: flex;
+  width: 100%;
+}

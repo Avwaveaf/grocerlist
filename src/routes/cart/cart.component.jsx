@@ -1,15 +1,29 @@
-import { Fragment, useContext } from "react";
+import { useContext } from "react";
+import { addCollectionAndDoc } from "../../utils/firebase/firebase.utils";
 import { SelectToCartContext } from "../../components/context/selectToCart.context";
 import { CartProduct } from "../../components/cart-product/cart-product.component";
 import { Outlet } from "react-router-dom";
 import { Link } from "react-router-dom";
 import "./cart.style.css";
+import { UserContext } from "../../components/context/user.context";
 export const Cart = () => {
-  const { cardVariety, cardVarietyCount, deleteCardDataFromSelectVariety } =
-    useContext(SelectToCartContext);
+  const { currentUser } = useContext(UserContext);
+  const {
+    cardVariety,
+    setCardVariety,
+    cardVarietyCount,
+    deleteCardDataFromSelectVariety,
+  } = useContext(SelectToCartContext);
   const removeBtnHandler = (item) => {
     deleteCardDataFromSelectVariety(item);
   };
+  const checkOutHandler = () => {
+    // const dietList = { cardVariety };
+    addCollectionAndDoc(cardVariety, currentUser);
+
+    setCardVariety([]);
+  };
+
   return (
     <div className="cartPage-container">
       <div className="cartPage-product-list-container">
@@ -31,6 +45,7 @@ export const Cart = () => {
                 </div>
               );
             })}
+            <button onClick={checkOutHandler}>Checkout</button>
           </div>
         ) : (
           <div className="item-list-unavailable">

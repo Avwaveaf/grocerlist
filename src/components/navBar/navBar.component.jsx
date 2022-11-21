@@ -93,6 +93,9 @@ export const NavBar = () => {
               <Link className="navigate-button" to="/">
                 <span onClick={logOutHandler}>Logout</span>
               </Link>
+              <Link className="navigate-button" to="/mydiet">
+              <span>My Diet</span>
+            </Link>
 
               <div
                 className="cart-btn-container"
