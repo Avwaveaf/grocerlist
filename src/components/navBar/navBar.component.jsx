@@ -5,6 +5,7 @@ import { GoogleIcon } from "../googleIcon/googleIcon.component";
 import { SelectToCartContext } from "../context/selectToCart.context";
 import { CartProduct } from "../cart-product/cart-product.component";
 import { signOutUser } from "../../utils/firebase/firebase.utils";
+import { Footer } from "../footer/footer.component";
 
 import "./navBar.style.css";
 import { UserContext } from "../context/user.context";
@@ -94,8 +95,8 @@ export const NavBar = () => {
                 <span onClick={logOutHandler}>Logout</span>
               </Link>
               <Link className="navigate-button" to="/mydiet">
-              <span>My Diet</span>
-            </Link>
+                <span>My Diet</span>
+              </Link>
 
               <div
                 className="cart-btn-container"
@@ -145,6 +146,7 @@ export const NavBar = () => {
         })}
       </div>
       <Outlet />
+      <Footer />
     </Fragment>
   );
 };

@@ -1,0 +1,247 @@
+.home-page-container {
+  margin: 70px 0px;
+  display: flex;
+  box-sizing: border-box;
+  background-color: white;
+  flex-direction: column;
+  margin-bottom: 0px;
+}
+.socials-side-bar-container {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 40%;
+  background-color: red;
+  padding: 15px 10px;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+.home-page-banner-container {
+  background-image: url("../../assets/background-waves.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  padding: 0px;
+}
+.home-page-banner-title-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  color: black;
+}
+.title-card {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+}
+.title-card-title-name {
+  font-size: 18px;
+  font-weight: bold;
+  font-family: helvetica;
+}
+.title-card-title-name-second {
+  font-size: 30px;
+  font-weight: bold;
+}
+.anchor-container {
+  padding: 10px px;
+  box-sizing: border-box;
+}
+.get-to-know-anchor {
+  color: red;
+  transition: 1s;
+}
+
+.get-to-know-anchor:hover {
+  color: black;
+  animation: none;
+  font-size: 16px;
+  text-decoration: none;
+}
+.home-page-content-description-container {
+  display: flex;
+  padding: 50px;
+  background-color: whitesmoke;
+}
+.content-description-card-container {
+  width: 90%;
+  display: flex;
+  justify-content: space-evenly;
+  margin: auto;
+  height: 300px;
+
+  padding: 10px 30px;
+  border-radius: 50px;
+  border-top: 2px solid white;
+  border-left: 2px solid white;
+  background: #f5f5f5;
+  box-shadow: 20px -20px 60px #d0d0d0, -20px -20px 60px #ffffff;
+}
+.content-description-card {
+  flex: 1;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.home-page-content-description-detail-container {
+  display: flex;
+}
+.encouragement-text {
+  height: 30px;
+  padding: 10px 0px;
+  font-size: 15px;
+  font-weight: bold;
+}
+.encouragement-text::before {
+  content: "";
+  animation: typewriter 2s linear infinite;
+}
+@keyframes typewriter {
+  0% {
+    content: "R";
+  }
+  9% {
+    content: "RE";
+  }
+  18% {
+    content: "REG";
+  }
+  27% {
+    content: "REGI";
+  }
+  36% {
+    content: "REGIS";
+  }
+  45% {
+    content: "REGIST";
+  }
+  54% {
+    content: "REGISTE";
+  }
+  63% {
+    content: "REGISTER";
+  }
+  72% {
+    content: "REGISTER N";
+  }
+  81% {
+    content: "REGISTER NO";
+  }
+  81% {
+    content: "REGISTER NOW";
+  }
+  90% {
+    content: "REGISTER NOW!";
+  }
+  100% {
+    content: "REGISTER NOW!";
+  }
+}
+
+.home-page-content-detail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 3;
+}
+.home-page-content-detail-image-container {
+  flex: 1;
+}
+.home-page-content-description-detail-container-left {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.home-page-button-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 50%;
+  align-items: center;
+}
+.home-page-button-container {
+  width: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  border-radius: 50px;
+  background-color: #f5482d;
+  transition: 1s;
+}
+.home-page-button-container:hover {
+  border-radius: 50px;
+  width: 60%;
+}
+.home-page-button-container button {
+  border: none;
+  background-color: inherit;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 1s;
+  padding: 10px;
+}
+.home-page-button-container:hover button {
+  color: white;
+
+  border: none;
+}
+.feature-icon-container {
+  border-radius: 50px;
+  width: 70px;
+  height: 70px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 4;
+  position: relative;
+
+  background: #f5f5f5;
+  box-shadow: inset 20px -20px 60px #d0d0d0, inset -20px 20px 60px #ffffff;
+}
+.feature-description-container {
+  border-radius: 50px;
+  background: #f5f5f5;
+  box-shadow: 20px -8px 60px #d0d0d0, -20px 20px 60px #ffffff;
+  border-top: 2px solid white;
+  border-left: 2px solid white;
+  border-bottom: 2px solid rgb(225, 224, 224);
+  border-radius: 50px;
+  height: 200px;
+  padding: 40px 40px;
+  box-sizing: border-box;
+  width: 90%;
+  margin: auto;
+  position: relative;
+  top: -40px;
+  display: flex;
+  flex-direction: column;
+}
+.feature-title {
+  font-size: 25px;
+  font-weight: 600;
+}
+.feature-description {
+  margin-top: 10px;
+  text-overflow: ellipsis;
+  width: 250px;
+  margin: 10px auto;
+  color: gray;
+  white-space: nowrap;
+  overflow: hidden;
+  height: 50px;
+}
+.home-page-detail-container {
+  background-image: url("../../assets/background-waves-2.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 350px;
+  margin-bottom: 0px;
+}

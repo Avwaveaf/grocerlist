@@ -8,10 +8,7 @@ import { UserContext } from "./components/context/user.context";
 import { Cart } from "./routes/cart/cart.component";
 import { ProductInfo } from "./routes/product-info/product-info.component";
 import { MyDiet } from "./routes/my-diet/my-diet.component";
-const HomePage = () => {
-  return <div style={{ marginTop: "400px" }}>this is home page</div>;
-};
-
+import { HomePage } from "./routes/home-page/home-page.container";
 function App() {
   const { currentUser } = useContext(UserContext);
   return (
