@@ -18,15 +18,39 @@ export const Footer = () => {
         </div>
         <div className="profile-container">
           <span className="profile-title">My other Portofolio</span>
-          <a className="profile-desc" href="">
+          <a
+            className="profile-desc"
+            href="https://avwaveaf.github.io/petrolodex/"
+            target="_blank"
+            rel="noreferrer"
+          >
             <GoogleIcon iconName="public" /> &nbsp;PetAdopt
           </a>
         </div>
       </div>
       <div className="footer-right">
-        <div className="footer-right-title">Me on Social media:</div>
-        <div>L</div>
-        <div>G</div>
+        <div className="profile-container">
+          <span className="profile-title">Social Media:</span>
+          <a
+            className="profile-desc"
+            href="https://www.linkedin.com/in/muhamad-afif-fadillah-9bab0221a"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <GoogleIcon iconName="share" /> &nbsp;LinkedIn
+          </a>
+          <a
+            className="profile-desc"
+            href="https://github.com/Avwaveaf"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <GoogleIcon iconName="share" /> &nbsp;Github
+          </a>
+        </div>
+      </div>
+      <div className="footer-bottom">
+        <span>Created with React 2022 - &copy;Avwave Project GrocerList</span>
       </div>
     </div>
   );

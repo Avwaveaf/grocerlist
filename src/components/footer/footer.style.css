@@ -35,3 +35,12 @@
   color: rgb(169, 169, 169);
   text-decoration: none;
 }
+.footer-bottom {
+  position: absolute;
+  margin-top: 250px;
+  border-top: 2px solid gray;
+  width: 80%;
+  text-align: center;
+  padding-top: 10px;
+  color: gray;
+}
