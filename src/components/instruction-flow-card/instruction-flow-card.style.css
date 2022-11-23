@@ -1,0 +1,101 @@
+.instruction-card-container {
+  background-color: #ffffff;
+  opacity: 1;
+
+  background-image: radial-gradient(circle at center center, #000000, #e5e5f7),
+    repeating-radial-gradient(
+      circle at center center,
+      #000000,
+      #000000,
+      10px,
+      transparent 20px,
+      transparent 10px
+    );
+  background-blend-mode: multiply;
+  display: flex;
+  justify-content: end;
+  width: 89%;
+
+  margin: auto;
+  border-radius: 50px;
+  box-shadow: 0px 2px 43px 0px rgba(0, 0, 0, 0.48);
+  -webkit-box-shadow: 0px 2px 43px 0px rgba(0, 0, 0, 0.48);
+  -moz-box-shadow: 0px 2px 43px 0px rgba(0, 0, 0, 0.48);
+}
+.instruction-card-structure-container {
+  background: linear-gradient(
+    109.6deg,
+    rgba(0, 0, 0, 0.93) 11.2%,
+    rgb(63, 61, 61) 78.9%
+  );
+  width: 60%;
+  border-left: 5px dotted red;
+  padding-left: 10%;
+}
+.instruction-cards-item-container {
+  background-color: white;
+  width: 50%;
+  display: flex;
+  margin: 30px 0px;
+  border-radius: 15px;
+  transition: 1s;
+  color: gray;
+}
+.instruction-cards-item-container:hover :not(.instruction-card-item-icon > *) {
+  transform: scale(110%);
+  color: black;
+}
+/* .instruction-cards-item-container:hover .instruction-card-item-icon {
+} */
+.instruction-card-item-description {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 1s;
+  padding: 20px 0px;
+}
+
+.insctruction-card-item-desc-text {
+  padding: 23px;
+  width: 400px;
+  background: linear-gradient(
+    to top,
+    lightgrey 0%,
+    lightgrey 1%,
+    #e0e0e0 26%,
+    #efefef 48%,
+    #d9d9d9 75%,
+    #bcbcbc 100%
+  );
+  border-radius: 25px;
+  text-align: center;
+  cursor: pointer;
+}
+.instruction-card-item-icon {
+  padding: 20px;
+  position: relative;
+  right: 175px;
+  border-radius: 50px;
+  background-color: white;
+  border: 1px solid black;
+  transition: 1s;
+  height: 25px;
+}
+.instruction-card-title {
+  background-color: white;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: 200px;
+  position: relative;
+  right: 100px;
+  top: -20px;
+  border-radius: 25px;
+  font-size: 20px;
+  font-weight: bold;
+  border-bottom: 5px solid red;
+}
+.instruction-icon {
+  font-weight: bold;
+}

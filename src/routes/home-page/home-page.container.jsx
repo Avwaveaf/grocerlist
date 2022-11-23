@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { FeatureDescriptionCard } from "../../components/feature-description/feature-description.component";
-import { GoogleIcon } from "../../components/googleIcon/googleIcon.component";
+import { InstructionFlowCard } from "../../components/instruction-flow-card/instruction-flow-card.component";
 import "./home-page.style.css";
 export const HomePage = () => {
   const navigate = useNavigate();
@@ -81,24 +81,7 @@ export const HomePage = () => {
         </div>
       </div>
       <div className="home-page-detail-container">
-        <div className="home-page-content-description-detail-container">
-          <div className="home-page-content-detail">feature description</div>
-          <div className="home-page-content-detail-image-container">
-            <img src="" alt="detail image" />
-          </div>
-        </div>
-        <div className="home-page-content-description-detail-container-left">
-          <div className="home-page-content-detail">feature description</div>
-          <div className="home-page-content-detail-image-container">
-            <img src="" alt="detail image" />
-          </div>
-        </div>
-        <div className="home-page-content-description-detail-container">
-          <div className="home-page-content-detail">feature description</div>
-          <div className="home-page-content-detail-image-container">
-            <img src="" alt="detail image" />
-          </div>
-        </div>
+        <InstructionFlowCard />
       </div>
     </div>
   );

@@ -242,6 +242,7 @@
   background-image: url("../../assets/background-waves-2.svg");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 350px;
+  height: 800px;
   margin-bottom: 0px;
+  padding-top: 30px;
 }
