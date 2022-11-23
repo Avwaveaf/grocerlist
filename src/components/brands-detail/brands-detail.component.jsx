@@ -71,7 +71,7 @@ export const BrandsDetail = ({ product }) => {
         <span style={{ fontSize: "15px", color: "gray" }}>
           Product Description :
         </span>
-        <div>
+        <div className="item-description-long-bottom-right">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce nec
           commodo purus. Nullam a fringilla ex. Fusce porta imperdiet mi, a
           posuere sem pretium et. Aliquam non lacus luctus, porttitor mauris

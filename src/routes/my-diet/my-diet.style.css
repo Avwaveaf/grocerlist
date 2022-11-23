@@ -6,6 +6,7 @@
   overflow: hidden;
   background-color: whitesmoke;
 }
+
 .my-diet-list {
   display: flex;
   flex-direction: column;

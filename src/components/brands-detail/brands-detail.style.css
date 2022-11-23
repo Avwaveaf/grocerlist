@@ -1,6 +1,10 @@
 .brand-detail-container {
   display: flex;
   width: 97%;
+  overflow: scroll;
+}
+.brand-detail-container::-webkit-scrollbar {
+  display: none;
 }
 
 .brand-detail-image-container {
@@ -77,4 +81,8 @@
   font-size: 15px;
   border-bottom: 2px solid gray;
   height: fit-content;
+  margin-bottom: 100px;
+}
+.item-description-long-bottom-right {
+  padding-bottom: 100px;
 }

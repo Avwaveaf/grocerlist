@@ -1,3 +1,92 @@
 .sign-in-container {
-  margin-top: 300px;
+  margin: 105px auto;
+}
+.login-google-container {
+  border: 1px solid gray;
+  border-radius: 50px;
+  display: flex;
+  height: 30px;
+  padding: 10px;
+  background-color: whitesmoke;
+  cursor: pointer;
+  transition: 1s;
+}
+.login-google-container:hover {
+  transform: scale(110%);
+}
+.loginGoogle-icon {
+  width: 30px;
+  height: 30px;
+}
+.loginGoogle-button {
+  border: none;
+  background-color: inherit;
+  cursor: pointer;
+  color: black;
+  outline: none;
+}
+.signin-card {
+  display: flex;
+  background-color: black;
+  width: 70%;
+  justify-content: space-between;
+  margin: auto;
+  height: 500px;
+  overflow: hidden;
+  border-radius: 30px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+.right-signin-card {
+  width: 60%;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  background-color: #e5e5f7;
+  opacity: 0.8;
+  background-image: radial-gradient(circle at center center, #000000, #e5e5f7),
+    repeating-radial-gradient(
+      circle at center center,
+      #000000,
+      #000000,
+      10px,
+      transparent 20px,
+      transparent 10px
+    );
+  background-blend-mode: multiply;
+}
+.right-signin-title {
+  font-size: 40px;
+  font-weight: bold;
+  border-bottom: 1px solid gray;
+  margin-bottom: 5px;
+}
+
+.left-signin-card {
+  height: 400px;
+  width: 400px;
+  position: relative;
+  left: 60px;
+  top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.322);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.left-signin-card-title {
+  border-bottom: 1px solid gray;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
 }
