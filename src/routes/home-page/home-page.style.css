@@ -53,13 +53,13 @@
   padding: 10px px;
   box-sizing: border-box;
 }
-.get-to-know-anchor {
-  color: red;
+.get-to-know-anchor a {
+  color: gray;
   transition: 1s;
 }
 
-.get-to-know-anchor:hover {
-  color: black;
+.get-to-know-anchor a:hover {
+  color: red;
   animation: none;
   font-size: 16px;
   text-decoration: none;
@@ -95,7 +95,7 @@
 .encouragement-text {
   height: 30px;
   padding: 10px 0px;
-  font-size: 15px;
+  font-size: 20px;
   font-weight: bold;
 }
 .encouragement-text::before {
@@ -245,4 +245,10 @@
   height: 800px;
   margin-bottom: 0px;
   padding-top: 30px;
+}
+.bottom-detail-container {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
 }

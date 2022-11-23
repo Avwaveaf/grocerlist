@@ -63,7 +63,6 @@ export const HomePage = () => {
           </div>
         </div>
         <div className="home-page-button-section">
-          <div className="encouragement-text"></div>
           <div
             id="feature"
             onClick={redirectHandler}
@@ -82,6 +81,18 @@ export const HomePage = () => {
       </div>
       <div className="home-page-detail-container">
         <InstructionFlowCard />
+        <div className="bottom-detail-container">
+          <div className="home-page-button-section">
+            <div className="encouragement-text"></div>
+            <div
+              id="feature"
+              onClick={redirectHandler}
+              className="home-page-button-container"
+            >
+              <button>Login With Google</button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
