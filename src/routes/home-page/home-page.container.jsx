@@ -29,17 +29,6 @@ export const HomePage = () => {
   ];
   return (
     <div className="home-page-container">
-      <div className={`socials-side-bar-container `}>
-        <div>
-          <span>F</span>
-        </div>
-        <div>
-          <span>L</span>
-        </div>
-        <div>
-          <span>G</span>
-        </div>
-      </div>
       <div className="home-page-banner-container">
         <div className="home-page-banner-title-container">
           <div className="title-card">
