@@ -25,7 +25,7 @@ To install this project on your desktop, follow these steps:
 
 2. Clone the repository onto your local machine. You can do this by opening your terminal, navigating to the directory where you want to store the project, and running the following command:
 
-` git clone https://github.com/Avwaveaf/BookShelf_App.git `
+` https://github.com/Avwaveaf/grocerlist.git `
 
 3. Navigate into the project directory:
 
